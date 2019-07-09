@@ -368,7 +368,7 @@ class Program(object):
         """
         return '\n'.join(itertools.chain(
             (dg.out() for dg in self._defined_gates),
-            (instr.out(allow_placeholders=allow_placeholders) for instr in self.instructions),
+            (instr.out() for instr in self.instructions),
             [''],
         ))
 
